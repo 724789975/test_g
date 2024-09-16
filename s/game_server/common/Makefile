@@ -3,9 +3,9 @@ AR = ar
 CFLAGS = -c
 
 ifdef RELEASE
-	CFLAGS += -O2 -g -DNDEBUG
+	CFLAGS += -O2 -g -DNDEBUG -Wno-narrowing
 else
-	CFLAGS += -g -DDEBUG
+	CFLAGS += -g -DDEBUG -Wno-narrowing
 endif
 
 TARGET = ../lib/libcommon.a

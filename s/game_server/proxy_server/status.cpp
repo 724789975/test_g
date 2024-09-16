@@ -21,7 +21,7 @@ Status::Status()
 }
 
 #define write_member(name) write_status(writer, #name, name)
-#define foreach_queue_format(name) name"\t"name"\t"name"\t"name"\t"name
+#define foreach_queue_format(name) name "\t" name "\t" name "\t" name "\t" name
 #define foreach_queue(name) rpc[0].name, rpc[1].name, rpc[2].name, rpc[3].name, rpc[4].name
 
 // write

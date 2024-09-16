@@ -3,11 +3,11 @@ CFLAGS = -c -I../common
 LFLAGS = -m64 
 
 ifdef RELEASE
-	CFLAGS += -O2 -g -DNDEBUG -Wno-deprecated
-	LFLAGS += -O2 -g -rdynamic -ldl -lpthread
+	CFLAGS += -O2 -g -DNDEBUG -Wno-deprecated -Wno-narrowing
+	LFLAGS += -O2 -g -rdynamic -ldl -lpthread -Wno-narrowing
 else
-	CFLAGS += -g -DDEBUG -Wno-deprecated
-	LFLAGS += -g -rdynamic -ldl -lpthread
+	CFLAGS += -g -DDEBUG -Wno-deprecated -Wno-narrowing
+	LFLAGS += -g -rdynamic -ldl -lpthread -Wno-narrowing
 endif
 
 TARGET = ../bin/loginserver
